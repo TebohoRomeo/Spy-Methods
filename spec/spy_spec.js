@@ -1,6 +1,6 @@
 let Car = require('../src/spy');
 
-describe('Car getBrand and getSpeed Test', function() {
+describe('getBrand() function', function() {
   let car = new Car();
 
   it('calls the getBrand() function', function() {
