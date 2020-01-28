@@ -22,9 +22,12 @@ class Car {
     this.speed = speed;
   }
 
-  toString() {
+  carSpecs() {
     return `Did you know? ${this.getBrand()} Drives ${this.getSpeed()} km/h. Consider buying one.`;
   }
 }
+
+let car  = new Car()
+console.log(car.carSpecs());
 
 module.exports = Car;

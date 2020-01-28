@@ -16,17 +16,21 @@ describe('Car getBrand and getSpeed Test', function() {
     expect(car.getBrand).toHaveBeenCalled();
     expect(car.getBrand).toHaveBeenCalledTimes(3);
     expect(car.getBrand).toHaveBeenCalledWith(360, 'BMW 3 series GT');
+  });
 
+  it('calls the getSpeed() and getSpeed function', function() {
+    // Create a new intance of Car
+    let BMW = new Car();
     // spyOn Speed
-    spyOn(car, 'getSpeed');
+    spyOn(BMW, 'getSpeed');
 
     // Method calling Speed
-    car.getSpeed();
-    car.getSpeed();
-    car.getSpeed(360, 'BMW 3 series GT');
+    BMW.getSpeed();
+    BMW.getSpeed();
+    BMW.getSpeed(360, 'BMW 3 series GT');
 
-    expect(car.getSpeed).toHaveBeenCalled();
-    expect(car.getSpeed).toHaveBeenCalledTimes(3);
-    expect(car.getSpeed).toHaveBeenCalledWith(360, 'BMW 3 series GT');
+    expect(BMW.getSpeed).toHaveBeenCalled();
+    expect(BMW.getSpeed).toHaveBeenCalledTimes(3);
+    expect(BMW.getSpeed).toHaveBeenCalledWith(360, 'BMW 3 series GT');
   });
 });
